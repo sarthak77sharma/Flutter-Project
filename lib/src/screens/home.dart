@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
-          fixedColor: Colors.green,
+          fixedColor: Colors.lightBlue,
           items: [
             BottomNavigationBarItem(
               label: 'Home',

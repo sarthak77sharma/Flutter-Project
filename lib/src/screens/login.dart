@@ -18,11 +18,22 @@ class _LoginScreenState extends State<LoginScreen> {
         title: Text('Login'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(50.0),
+            child: FlutterLogo(
+              size: 75.0,
+              style: FlutterLogoStyle.markOnly,
+              duration: const Duration(milliseconds: 750),
+              curve: Curves.fastOutSlowIn,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              decoration: InputDecoration(hintText: 'Email'),
+              decoration: InputDecoration(
+                  hintText: 'Email', border: OutlineInputBorder()),
               onChanged: (value) {
                 setState(() {
                   _email = value.trim();
@@ -34,7 +45,8 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.all(8.0),
             child: TextField(
                 obscureText: true,
-                decoration: InputDecoration(hintText: 'Password'),
+                decoration: InputDecoration(
+                    hintText: 'Password', border: OutlineInputBorder()),
                 onChanged: (value) {
                   setState(() {
                     _password = value.trim();
